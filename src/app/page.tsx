@@ -1,4 +1,5 @@
 import { PHOTOS, PROFILES } from "@/lib/constants";
+import Image from "next/image";
 import React from "react";
 
 export default function Home() {
@@ -6,9 +7,11 @@ export default function Home() {
     <div>
       <div className="flex items-center gap-10 flex-col lg:flex-row min-h-72">
         <div className="flex flex-col flex-1 gap-10">
-          <img
+          <Image
             src="/me.avif"
             alt="Tunahan Orhan"
+            width={64}
+            height={64}
             className="rounded-full w-16 h-16 object-cover mx-auto lg:mx-px"
             loading="lazy"
           />
@@ -42,10 +45,12 @@ export default function Home() {
                 index % 2 === 0 ? "rotate-2" : "-rotate-2"
               }`}
             >
-              <img
+              <Image
                 key={photo.src}
                 src={photo.src}
                 alt="Photo"
+                width={200}
+                height={200}
                 className={`absolute inset-0 w-full h-full object-cover`}
                 loading="lazy"
               />

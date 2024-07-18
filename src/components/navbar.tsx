@@ -5,6 +5,7 @@ import { LINKS } from "@/lib/constants";
 import { MobileDrawer } from "./mobile-drawer";
 import { usePathname } from "next/navigation";
 import star from "@/../public/star.svg";
+import Image from "next/image";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -20,11 +21,6 @@ export function Navbar() {
                   <div className="flex flex-1">
                     <div className="flex items-center h-10 w-10">
                       <a href="/" className="pointer-events-auto">
-                        {/* <img
-                          src={star.src}
-                          alt="star"
-                          className="w-8 h-8 fill-current"
-                        /> */}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 12 12"
@@ -57,9 +53,11 @@ export function Navbar() {
                               href={link.href}
                             >
                               {pathname === link.href ? (
-                                <img
+                                <Image
                                   src={star.src}
                                   alt={link.label}
+                                  width={8}
+                                  height={8}
                                   className="w-2 h-2 absolute top-2 left-2 animate-bounce"
                                 />
                               ) : null}
