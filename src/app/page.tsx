@@ -16,7 +16,7 @@ export default function Home() {
             loading="lazy"
           />
           <span className="text-xl md:text-3xl text-nowrap">
-            Hello! I'm Tunahan Orhan
+            Hello! I&apos;m Tunahan Orhan
           </span>
         </div>
         <div className="flex flex-col flex-1 gap-10">
@@ -39,14 +39,14 @@ export default function Home() {
       </div>
       <div className="mt-16 sm:mt-20">
         <div className="-my-4 flex justify-center gap-5 py-4 sm:gap-8">
-          {PHOTOS.map((photo, index) => (
+          {PHOTOS.map((photo: any, index: number) => (
             <div
               className={`relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl sm:w-72 sm:rounded-2xl ${
                 index % 2 === 0 ? "rotate-2" : "-rotate-2"
               }`}
+              key={photo.title}
             >
               <Image
-                key={photo.src}
                 src={photo.src}
                 alt="Photo"
                 width={200}
