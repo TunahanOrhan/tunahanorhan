@@ -25,7 +25,7 @@ export const ExperienceItem = ({
             {jobTitle} at {company}
           </h1>
           <span className="text-xs font-normal font-sans opacity-80">
-            {startDate} - {endDate}
+            {startDate} - {endDate ? endDate : "Present"}
           </span>
         </div>
         <div className="text-sm">
