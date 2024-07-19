@@ -14,17 +14,17 @@ export const PROFILES = [
   },
   {
     title: "LinkedIn",
-    url: "https://www.linkedin.com/in/tunahanorhan",
+    url: "https://www.linkedin.com/in/tunahan-orhan/",
     icon: <Linkedin size={16} strokeWidth={1} />,
   },
   {
     title: "Instagram",
-    url: "https://www.instagram.com/tunahanorhan",
+    url: "https://www.instagram.com/tunahanorh/",
     icon: <Instagram size={16} strokeWidth={1} />,
   },
   {
     title: "Twitter",
-    url: "https://twitter.com/tunahanorhan",
+    url: "https://x.com/tunahanorh",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
