@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PT_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const ptSans = PT_Sans({
   weight: "400",
@@ -42,6 +43,7 @@ export default function RootLayout({
             </main>
           </div>
         </main>
+        <SpeedInsights />
       </body>
     </html>
   );
