@@ -1,7 +1,7 @@
 import { ExperienceItem } from "@/components/experience-item";
 import { LoadingSpinner } from "@/components/loading-spinner";
-import { PROFILES } from "@/lib/constants";
 import { getExperience } from "@/lib/contentful";
+import { Metadata } from "next";
 import { Suspense } from "react";
 
 export default async function Experience() {
@@ -47,3 +47,7 @@ export default async function Experience() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: "Experience",
+};
